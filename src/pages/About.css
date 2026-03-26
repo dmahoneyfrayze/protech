@@ -66,11 +66,14 @@
   position: relative;
 }
 
-.img-main img {
+.img-main img.authentic-rect {
   width: 100%;
-  height: 700px;
-  object-fit: cover;
-  border-radius: 4px;
+  height: 600px;
+  object-fit: contain;
+  background: var(--white);
+  padding: 3rem;
+  border: 1px solid var(--border-glass);
+  box-shadow: var(--shadow-premium);
 }
 
 .img-accent {

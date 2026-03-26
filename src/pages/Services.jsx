@@ -1,6 +1,17 @@
 import React from 'react';
 import './Services.css';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+};
+
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { staggerChildren: 0.15 } }
+};
 
 const Services = () => {
   const residentialServices = [
@@ -52,38 +63,62 @@ const Services = () => {
       {/* Residential Section */}
       <section className="service-category residential-sec">
         <div className="container">
-          <div className="category-header">
+          <motion.div 
+            className="category-header"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeInUp}
+          >
             <h2>01 / <span className="text-red">Residential</span> Health-Centric</h2>
             <p>Moving from hardware sales to "Family Health & Safety" provision.</p>
-          </div>
-          <div className="premium-service-grid">
+          </motion.div>
+          <motion.div 
+            className="premium-service-grid"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+          >
             {residentialServices.map((s, i) => (
-              <div key={i} className="premium-card reveal">
+              <motion.div variants={fadeInUp} key={i} className="premium-card">
                 <div className="p-card-icon">{s.icon}</div>
                 <h3>{s.title}</h3>
                 <p>{s.desc}</p>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Commercial Section */}
       <section className="service-category commercial-sec">
         <div className="container">
-          <div className="category-header text-right">
+          <motion.div 
+            className="category-header text-right"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeInUp}
+          >
             <h2>02 / <span className="text-red">Commercial</span> Uptime</h2>
             <p>Leveraging "Inventory Readiness" to eliminate catastrophic downtime in NW Ontario's core sectors.</p>
-          </div>
-          <div className="premium-service-grid">
+          </motion.div>
+          <motion.div 
+            className="premium-service-grid"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+          >
             {industrialServices.map((s, i) => (
-              <div key={i} className="premium-card reveal dark-card">
+              <motion.div variants={fadeInUp} key={i} className="premium-card dark-card">
                 <div className="p-card-icon">{s.icon}</div>
                 <h3>{s.title}</h3>
                 <p>{s.desc}</p>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 

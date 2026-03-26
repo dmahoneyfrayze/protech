@@ -1,6 +1,17 @@
 import React from 'react';
 import './Installations.css';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+};
+
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { staggerChildren: 0.15 } }
+};
 
 const Installations = () => {
   const caseStudies = [
@@ -35,42 +46,59 @@ const Installations = () => {
 
       <section className="install-process">
         <div className="container">
-          <div className="process-grid">
-            <div className="process-step">
+          <motion.div 
+            className="process-grid"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+          >
+            <motion.div variants={fadeInUp} className="process-step">
               <span className="step-num">01</span>
               <h3>Consultative Blueprinting</h3>
               <p>We don't just "install." We engineer systems for the specific chemical and pressure profiles of NW Ontario.</p>
-            </div>
-            <div className="process-step">
+            </motion.div>
+            <motion.div variants={fadeInUp} className="process-step">
               <span className="step-num">02</span>
               <h3>Inventory Readiness</h3>
               <p>Utilizing our massive local stock of Canadian-made Pompco and Excalibur components for Zero-Delay delivery.</p>
-            </div>
-            <div className="process-step">
+            </motion.div>
+            <motion.div variants={fadeInUp} className="process-step">
               <span className="step-num">03</span>
               <h3>Expert Implementation</h3>
               <p>Our technical staff brings 50+ years of mastery to every joint, wire, and calibration.</p>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
 
       <section className="case-studies-premium">
         <div className="container">
-          <div className="section-header-center">
+          <motion.div 
+            className="section-header-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
              <h2>The <span className="text-red">"Stellar"</span> Portfolio</h2>
              <p>Real-world examples of Pro-Tech reliability and technical mastery.</p>
-          </div>
-          <div className="case-study-grid">
+          </motion.div>
+          <motion.div 
+            className="case-study-grid"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+          >
             {caseStudies.map((study, i) => (
-              <div key={i} className="case-card reveal">
+              <motion.div variants={fadeInUp} key={i} className="case-card">
                 <span className="study-type">{study.type}</span>
                 <h3>{study.title}</h3>
                 <span className="location">{study.location}</span>
                 <p>{study.desc}</p>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
