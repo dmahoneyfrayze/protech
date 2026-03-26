@@ -1,0 +1,134 @@
+.footer {
+  background: var(--black);
+  color: var(--white);
+  padding: 5rem 0 0;
+  margin-top: 5rem;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1.5fr 0.8fr 0.8fr 1fr;
+  gap: 3rem;
+  padding-bottom: 4rem;
+}
+
+.footer-brand .logo-text {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-desc {
+  color: var(--gray);
+  margin-bottom: 2rem;
+  max-width: 350px;
+}
+
+.footer-contact-info p {
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
+}
+
+.footer-contact-info a:hover {
+  color: var(--primary-red);
+}
+
+.footer h4 {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  color: var(--white);
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.footer h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: var(--primary-red);
+}
+
+.footer ul {
+  list-style: none;
+}
+
+.footer ul li {
+  margin-bottom: 1rem;
+}
+
+.footer ul li a, .footer ul li {
+  color: var(--gray);
+  transition: color 0.3s ease;
+}
+
+.footer ul li a:hover {
+  color: var(--white);
+  padding-left: 5px;
+}
+
+.footer-cta p {
+  color: var(--gray);
+  margin-bottom: 1.5rem;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.05);
+  padding: 2rem 0;
+  background: #0d1117;
+  text-align: center;
+}
+
+.footer-bottom .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-bottom p {
+  color: var(--gray);
+  font-size: 0.9rem;
+}
+
+.footer-legal {
+  display: flex;
+  gap: 2rem;
+}
+
+.footer-legal a {
+  color: var(--gray);
+  font-size: 0.9rem;
+}
+
+.footer-legal a:hover {
+  color: var(--white);
+}
+
+@media (max-width: 992px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-brand .logo-text, .footer h4::after {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .footer h4::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .footer-bottom .container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}

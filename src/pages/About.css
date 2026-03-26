@@ -1,0 +1,132 @@
+.about-hero-premium {
+  padding: 18rem 0 10rem;
+  background: var(--deep-black);
+  color: var(--white);
+  text-align: center;
+}
+
+.about-hero-premium .tagline {
+  color: var(--primary-red);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: 800;
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.about-hero-premium h1 {
+  font-size: clamp(3rem, 10vw, 7rem);
+}
+
+.about-identity {
+  padding: var(--section-padding);
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 8rem;
+  align-items: center;
+}
+
+.large-lead {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 2.5rem;
+  color: var(--black);
+}
+
+.identity-text p:not(.large-lead) {
+  color: var(--gray);
+  margin-bottom: 2rem;
+}
+
+.about-stats-premium {
+  display: flex;
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+.a-stat strong {
+  display: block;
+  font-size: 2.5rem;
+  color: var(--primary-red);
+}
+
+.a-stat span {
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--gray);
+}
+
+.identity-image-stack {
+  position: relative;
+}
+
+.img-main img {
+  width: 100%;
+  height: 700px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.img-accent {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 250px;
+  background: var(--white);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-premium);
+  border-left: 8px solid var(--secondary-blue);
+}
+
+.accent-box p {
+  font-weight: 800;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  margin: 0 !important;
+}
+
+.about-values {
+  background: var(--off-white);
+  padding: 8rem 0;
+  border-top: 1px solid var(--light-gray);
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+}
+
+.value-item h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.value-item p {
+  color: var(--gray);
+}
+
+.about-cta-final {
+  padding: 10rem 0;
+  text-align: center;
+}
+
+.about-cta-final h2 {
+  font-size: 3.5rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (max-width: 992px) {
+  .grid-2 { grid-template-columns: 1fr; gap: 4rem; }
+  .img-main img { height: 400px; }
+  .img-accent { right: 0; top: 0; width: 200px; }
+  .values-grid { grid-template-columns: 1fr; }
+  .about-stats-premium { flex-direction: column; gap: 2rem; }
+}

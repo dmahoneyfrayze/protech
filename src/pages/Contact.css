@@ -1,0 +1,128 @@
+.contact-hero-premium {
+  padding: 18rem 0 10rem;
+  background: var(--deep-black);
+  color: var(--white);
+  text-align: center;
+}
+
+.contact-hero-premium .tagline {
+  color: var(--primary-red);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: 800;
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.contact-hero-premium h1 {
+  font-size: clamp(3rem, 10vw, 7rem);
+}
+
+.contact-main {
+  padding: 10rem 0;
+  background: var(--white);
+}
+
+.contact-grid-premium {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 8rem;
+}
+
+.detail-item {
+  margin-bottom: 4rem;
+}
+
+.detail-label {
+  display: block;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: var(--primary-red);
+  margin-bottom: 1.5rem;
+}
+
+.detail-item h3 {
+  font-size: 1.8rem;
+  line-height: 1.3;
+}
+
+.detail-item p {
+  color: var(--gray);
+  margin-top: 0.5rem;
+}
+
+.contact-form-premium {
+  background: var(--off-white);
+  padding: 5rem;
+  box-shadow: var(--shadow-premium);
+  border-radius: 4px;
+}
+
+.contact-form-premium h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+}
+
+.premium-field-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.p-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+}
+
+.p-field label {
+  font-weight: 800;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.p-field input, .p-field select, .p-field textarea {
+  background: var(--white);
+  border: 1px solid transparent;
+  padding: 1.2rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  transition: var(--transition-smooth);
+}
+
+.p-field input:focus, .p-field select:focus, .p-field textarea:focus {
+  outline: none;
+  border-color: var(--primary-red);
+}
+
+.w-full {
+  width: 100%;
+}
+
+.map-placeholder {
+  padding: 5rem 0;
+  background: var(--off-white);
+}
+
+.map-box {
+  background: var(--light-gray);
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed var(--gray);
+  color: var(--gray);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 800;
+}
+
+@media (max-width: 992px) {
+  .contact-grid-premium { grid-template-columns: 1fr; }
+  .contact-form-premium { padding: 3rem 1.5rem; }
+}

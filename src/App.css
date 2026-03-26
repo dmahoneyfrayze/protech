@@ -1,0 +1,14 @@
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+}
+
+/* Page transitions / basic layout */
+.page {
+  animation: fadeIn 0.6s ease-out;
+}
