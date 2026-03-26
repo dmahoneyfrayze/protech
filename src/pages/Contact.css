@@ -109,17 +109,25 @@
   background: var(--off-white);
 }
 
-.map-box {
-  background: var(--light-gray);
-  height: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px dashed var(--gray);
+.inventory-moat-contact {
+  padding: 6rem 0;
+  background: var(--black);
+  color: var(--white);
+}
+
+.moat-contact-box {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.moat-contact-box h3 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.moat-contact-box p {
   color: var(--gray);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: 800;
 }
 
 @media (max-width: 992px) {

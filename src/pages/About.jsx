@@ -15,15 +15,15 @@ const About = () => {
       <section className="about-identity">
         <div className="container grid-2">
           <div className="identity-text">
-            <h2>Pro-Tech: Not Just a Supplier, But a Partner.</h2>
+            <h2>NW Ontario's Premier Authority.</h2>
             <p className="large-lead">
-              Since 2009, Pro-Tech Sales and Service has been the backbone of NW Ontario's water infrastructure. 
-              But our roots go much deeper, with over 50 years of collective mastery in pump systems and electric motors.
+              Founded on the belief that reliability is a lifeline. Since 2009, Pro-Tech has served as the 
+              cornerstone of regional infrastructure, leveraging over 50 years of collective technical mastery.
             </p>
             <p>
-              We've built our reputation on one simple principle: reliability. Whether it's a residential 
-              water filter or a multi-kilowatt industrial motor, we treat every installation with the same 
-              precision engineering.
+              In a region defined by its rugged landscape, our position as the <strong>largest stocking pump and motor supplier</strong> 
+              isn't just a logistical fact—it's a competitive moat. We eliminate catastrophic downtime by providing 
+              immediate, off-the-shelf access to parts others have to "order in."
             </p>
             <div className="about-stats-premium">
               <div className="a-stat">
@@ -35,8 +35,8 @@ const About = () => {
                 <span>Stocking Supplier</span>
               </div>
               <div className="a-stat">
-                <strong>NW</strong>
-                <span>Ontario Focus</span>
+                <strong>99.99%</strong>
+                <span>Purity Promise</span>
               </div>
             </div>
           </div>
@@ -46,7 +46,7 @@ const About = () => {
             </div>
             <div className="img-accent">
                <div className="accent-box">
-                  <p>Authorized Dealer of Excalibur, Leeson, and more.</p>
+                  <p>Authorized Dealer of Excalibur, Leeson, Pompco, and Barnes.</p>
                </div>
             </div>
           </div>
@@ -57,16 +57,16 @@ const About = () => {
         <div className="container">
           <div className="values-grid">
             <div className="value-item">
-               <h3>Authenticity</h3>
-               <p>We source our products primarily from Canadian manufacturers, ensuring quality that meets national standards.</p>
+               <h3>Technical Partnership</h3>
+               <p>We move beyond simple transactions to professional consultations, ensuring the job is "done right" the first time.</p>
             </div>
             <div className="value-item">
-               <h3>Regional Pride</h3>
-               <p>Serving Thunder Bay isn't just business—it's supporting the community that fuels our growth.</p>
+               <h3>Canadian-Made Moat</h3>
+               <p>Prioritizing domestic quality from Excalibur and Pompco ensures equipment is ruggedized for the NWO climate.</p>
             </div>
             <div className="value-item">
-               <h3>Expert Support</h3>
-               <p>Our team provides end-to-end support, from initial blueprinting to emergency repairs.</p>
+               <h3>Inventory Readiness</h3>
+               <p>While others order, we stock. 99% of mission-critical parts are ready for immediate dispatch from 10th Ave.</p>
             </div>
           </div>
         </div>
@@ -74,8 +74,8 @@ const About = () => {
 
       <section className="about-cta-final">
         <div className="container">
-          <h2>Put Our Experience to Work</h2>
-          <Link to="/contact" className="btn-primary">Professional Consultation</Link>
+          <h2>Trust Your Infrastructure to Experts</h2>
+          <Link to="/contact" className="btn-primary">Initiate Technical Consultation</Link>
         </div>
       </section>
     </div>

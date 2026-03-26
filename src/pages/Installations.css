@@ -5,6 +5,65 @@
   text-align: center;
 }
 
+.case-studies-premium {
+  padding: 10rem 0;
+  background: var(--off-white);
+}
+
+.section-header-center {
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+.case-study-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.case-card {
+  background: var(--white);
+  padding: 3.5rem;
+  box-shadow: var(--shadow-premium);
+  position: relative;
+  transition: var(--transition-smooth);
+}
+
+.study-type {
+  display: inline-block;
+  background: var(--primary-red);
+  color: var(--white);
+  padding: 0.3rem 0.8rem;
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.case-card .location {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--gray);
+  margin-bottom: 1.5rem;
+}
+
+.case-card:hover {
+  transform: translateY(-10px);
+}
+
+.install-cta {
+  padding: 10rem 0;
+}
+
+.cta-box-dark {
+  background: var(--black);
+  color: var(--white);
+  padding: 6rem;
+  text-align: center;
+  border-radius: 4px;
+}
+
 .install-hero .tagline {
   color: var(--primary-red);
   text-transform: uppercase;

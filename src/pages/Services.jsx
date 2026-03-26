@@ -4,15 +4,39 @@ import { Link } from 'react-router-dom';
 
 const Services = () => {
   const residentialServices = [
-    { title: "Water Purity & Filtration", desc: "Advanced Excalibur systems for safe, clean family water.", icon: "💎" },
-    { title: "Home Pump Systems", desc: "Reliable residential water delivery and pressure solutions.", icon: "🚰" },
-    { title: "UV Purification", desc: "99.99% bacteria-free drinking water for your peace of mind.", icon: "🛡️" }
+    { 
+      title: "The 99.99% Assurance", 
+      desc: "Repositioning filtration from hardware to health. Our UV systems render water 99.99% free from bacteria—a non-negotiable for NWO homes and camps.", 
+      icon: "🛡️" 
+    },
+    { 
+      title: "Sub-Sewer Expansion", 
+      desc: "Enabling basement suite transformations. specialized sewage pumps for bathrooms and laundry rooms below the line.", 
+      icon: "🏗️" 
+    },
+    { 
+      title: "Camp Water Security", 
+      desc: "Reliable pump and filtration solutions engineered for the unique rigors of seasonal and remote North West Ontario properties.", 
+      icon: "🌲" 
+    }
   ];
 
-  const commercialServices = [
-    { title: "High-Capacity Motors", desc: "Industrial-grade Leeson motors for mission-critical apps.", icon: "⚡" },
-    { title: "Sewage & Waste Pumps", desc: "Efficient waste management for facilities and developments.", icon: "🏗️" },
-    { title: "System Maintenance", desc: "Preventative service contracts for zero industrial downtime.", icon: "🛠️" }
+  const industrialServices = [
+    { 
+      title: "Mining & Heavy Industry", 
+      desc: "Immediate replacement for heavy-duty motors (like SS362) in extraction environments where shipping delays equate to massive revenue loss.", 
+      icon: "⛏️" 
+    },
+    { 
+      title: "Paper Mill Systems", 
+      desc: "Maintaining the high-volume water movement and electric motors essential for continuous production in regional mills.", 
+      icon: "📜" 
+    },
+    { 
+      title: "Air & Gas Compressors", 
+      desc: "Dominating the repair and supply of industrial air systems—a high-frequency maintenance category for local manufacturing.", 
+      icon: "🌬️" 
+    }
   ];
 
   return (
@@ -21,6 +45,7 @@ const Services = () => {
         <div className="container">
           <span className="tagline">Engineered Reliability</span>
           <h1>Industrial <span className="text-stroke">Grade</span> <br />Solutions</h1>
+          <p className="header-sub">North West Ontario's largest stocking supplier of Excalibur, Pompco, Barnes, and Leeson.</p>
         </div>
       </section>
 
@@ -28,8 +53,8 @@ const Services = () => {
       <section className="service-category residential-sec">
         <div className="container">
           <div className="category-header">
-            <h2>01 / <span className="text-red">Residential</span> Solutions</h2>
-            <p>Elevating home water quality with professional-grade technology.</p>
+            <h2>01 / <span className="text-red">Residential</span> Health-Centric</h2>
+            <p>Moving from hardware sales to "Family Health & Safety" provision.</p>
           </div>
           <div className="premium-service-grid">
             {residentialServices.map((s, i) => (
@@ -47,11 +72,11 @@ const Services = () => {
       <section className="service-category commercial-sec">
         <div className="container">
           <div className="category-header text-right">
-            <h2>02 / <span className="text-red">Commercial</span> & Industrial</h2>
-            <p>Scaling power and efficiency for NW Ontario's industries.</p>
+            <h2>02 / <span className="text-red">Commercial</span> Uptime</h2>
+            <p>Leveraging "Inventory Readiness" to eliminate catastrophic downtime in NW Ontario's core sectors.</p>
           </div>
           <div className="premium-service-grid">
-            {commercialServices.map((s, i) => (
+            {industrialServices.map((s, i) => (
               <div key={i} className="premium-card reveal dark-card">
                 <div className="p-card-icon">{s.icon}</div>
                 <h3>{s.title}</h3>
@@ -62,12 +87,18 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Brands & Quality */}
-      <section className="brands-dark">
+      {/* Partnership Section */}
+      <section className="partnership-cta-section">
         <div className="container">
-            <div className="brand-box">
-                <p>Authorized Dealer for LEESON®, EXCALIBUR, POMPCO, BARNES & GOULDS</p>
-            </div>
+          <div className="partnership-box">
+             <h2>Technical Partnership Program</h2>
+             <p>
+               Join our formal partnership program for high-volume water users. 
+               Direct preventative maintenance contracts for car washes, tire shops, 
+               and agricultural irrigation systems.
+             </p>
+             <Link to="/contact" className="btn-primary">Become a Partner</Link>
+          </div>
         </div>
       </section>
 
@@ -75,7 +106,7 @@ const Services = () => {
         <div className="container">
           <h2>Need a Custom System?</h2>
           <p>Our engineers will design a solution tailored to your specific requirements.</p>
-          <Link to="/contact" className="btn-primary">Get Technical Advice</Link>
+          <Link to="/contact" className="btn-outline">Consult Technical Experts</Link>
         </div>
       </section>
     </div>

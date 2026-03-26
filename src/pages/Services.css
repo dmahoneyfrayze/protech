@@ -99,6 +99,31 @@
   font-size: 0.8rem;
 }
 
+.partnership-cta-section {
+  padding: 8rem 0;
+  background: var(--off-white);
+}
+
+.partnership-box {
+  background: var(--black);
+  color: var(--white);
+  padding: 5rem;
+  border-left: 8px solid var(--primary-red);
+}
+
+.partnership-box h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.partnership-box p {
+  font-size: 1.1rem;
+  color: var(--gray);
+  margin-bottom: 2.5rem;
+  max-width: 800px;
+}
+
 .services-cta {
   padding: 10rem 0;
   text-align: center;

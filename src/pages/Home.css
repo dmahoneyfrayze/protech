@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Outfit:wght@700;900&display=swap');
+
 .hero {
   height: 100vh;
   position: relative;
@@ -14,8 +16,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at 70% 30%, rgba(215, 0, 0, 0.15) 0%, transparent 50%),
-              linear-gradient(to right, rgba(0,0,0,0.9) 20%, transparent 100%);
+  background: radial-gradient(circle at 70% 30%, rgba(215, 0, 0, 0.1) 0%, transparent 50%),
+              linear-gradient(to right, rgba(0,0,0,0.95) 10%, transparent 100%);
   z-index: 1;
 }
 
@@ -29,7 +31,7 @@
   text-transform: uppercase;
   letter-spacing: 4px;
   font-size: 0.8rem;
-  font-weight: 700;
+  font-weight: 800;
   color: var(--primary-red);
   margin-bottom: 2rem;
 }
@@ -48,10 +50,11 @@
 .text-red { color: var(--primary-red); }
 
 .hero-lead {
-  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
   color: var(--gray);
-  max-width: 600px;
+  max-width: 650px;
   margin-bottom: 3.5rem;
+  line-height: 1.4;
 }
 
 .hero-actions {
@@ -66,10 +69,12 @@
   text-transform: uppercase;
   font-weight: 800;
   letter-spacing: 2px;
+  backdrop-filter: blur(10px);
 }
 
 .btn-outline-premium:hover {
   border-color: var(--white);
+  background: rgba(255,255,255,0.05);
 }
 
 .hero-scroll-indicator {
@@ -105,18 +110,20 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2px;
-  background: var(--light-gray); /* Border effect */
+  background: var(--light-gray);
+  box-shadow: var(--shadow-premium);
 }
 
 .pathway-card {
   background: var(--white);
   padding: 4rem 3rem;
-  height: 400px;
+  height: 420px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   position: relative;
   overflow: hidden;
+  transition: var(--transition-smooth);
 }
 
 .card-num {
@@ -135,7 +142,7 @@
 
 .pathway-card p {
   color: var(--gray);
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
   font-size: 0.95rem;
 }
 
@@ -147,8 +154,13 @@
   color: var(--primary-red);
 }
 
-.pathway-card:hover h3 {
-  transform: translateY(-5px);
+.pathway-card:hover {
+  background: var(--black);
+  color: var(--white);
+}
+
+.pathway-card:hover p {
+  color: var(--gray);
 }
 
 /* Brand Ticker */
@@ -161,6 +173,12 @@
 .brand-header {
   text-align: center;
   margin-bottom: 4rem;
+}
+
+.brand-header p {
+  color: var(--gray);
+  margin-top: 1rem;
+  font-weight: 600;
 }
 
 .brand-ticker {
@@ -196,13 +214,17 @@
   padding: 12rem 2rem;
 }
 
+.consultative-expertise {
+  background: var(--off-white);
+}
+
 .expertise-image {
   position: relative;
 }
 
 .expertise-image img {
   width: 100%;
-  height: 600px;
+  height: 650px;
   object-fit: cover;
   border-radius: 4px;
 }
@@ -220,7 +242,7 @@
 
 .experience-badge strong {
   display: block;
-  font-size: 3rem;
+  font-size: 3.5rem;
   line-height: 1;
 }
 
@@ -240,21 +262,48 @@
 }
 
 .list-item {
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 .list-item h4 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
 }
 
 .list-item p {
   color: var(--gray);
 }
 
+/* Canadian Moat */
+.canadian-moat {
+  padding: 8rem 0;
+  background: var(--black);
+  color: var(--white);
+}
+
+.moat-box {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid var(--border-glass);
+  padding: 5rem;
+}
+
+.moat-box h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.moat-box p {
+  font-size: 1.2rem;
+  color: var(--gray);
+  line-height: 1.8;
+}
+
 @media (max-width: 992px) {
   .pathway-grid { grid-template-columns: 1fr; }
   .expertise-grid { grid-template-columns: 1fr; gap: 4rem; }
   .expertise-image img { height: 400px; }
-  .experience-badge { right: 0; bottom: 0; }
+  .experience-badge { right: 0; bottom: 0; padding: 2rem; }
+  .moat-box { padding: 3rem 1.5rem; }
 }
